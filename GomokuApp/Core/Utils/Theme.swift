@@ -2,6 +2,11 @@ import SwiftUI
 
 extension Color {
     static let theme = ColorTheme()
+    static let boardLine = ColorTheme().boardLine
+    static let pieceBlackHighlight = ColorTheme().pieceBlackHighlight
+    static let pieceWhiteHighlight = ColorTheme().pieceWhiteHighlight
+    static let pieceBlack = ColorTheme().pieceBlack
+    static let pieceWhite = ColorTheme().pieceWhite
 }
 
 struct ColorTheme {
@@ -10,9 +15,16 @@ struct ColorTheme {
     let accent = Color(hex: "FF9800")
     let background = Color(hex: "F5F5F5")
     let surface = Color.white
+    let text = Color(hex: "333333")
     let textPrimary = Color(hex: "333333")
     let textSecondary = Color(hex: "999999")
+    let boardWood = Color(hex: "DEB887")
+    let boardLine = Color(hex: "5C4033")
     let boardBackground = Color(hex: "DEB887")
+    let pieceBlack = Color(hex: "1A1A1A")
+    let pieceBlackHighlight = Color(hex: "4A4A4A")
+    let pieceWhite = Color(hex: "F5F5F5")
+    let pieceWhiteHighlight = Color.white
     let blackStone = Color(hex: "1A1A1A")
     let whiteStone = Color(hex: "F5F5F5")
 }

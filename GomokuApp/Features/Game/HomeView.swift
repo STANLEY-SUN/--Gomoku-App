@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var appState: AppState
-    @State private var showGameMode = false
+    @State private var selectedMode: GameMode? = nil
     
     var body: some View {
         NavigationStack {
@@ -12,7 +12,7 @@ struct HomeView: View {
                 VStack(spacing: 12) {
                     Text("技能五子棋")
                         .font(AppFont.title())
-                        .foregroundColor(Color.theme.textPrimary)
+                        .foregroundColor(Color.theme.text)
                     
                     Text("来一局吧")
                         .font(AppFont.body())
@@ -20,7 +20,7 @@ struct HomeView: View {
                 }
                 
                 Button(action: {
-                    showGameMode = true
+                    selectedMode = .pveMedium
                 }) {
                     Text("开始游戏")
                         .font(AppFont.headline())
@@ -28,6 +28,17 @@ struct HomeView: View {
                         .frame(width: 200, height: 50)
                         .background(Color.theme.primary)
                         .cornerRadius(25)
+                }
+                
+                Button(action: {
+                    selectedMode = .pveEasy
+                }) {
+                    Text("简单模式")
+                        .font(AppFont.body())
+                        .foregroundColor(Color.theme.primary)
+                        .frame(width: 200, height: 44)
+                        .background(Color.theme.primary.opacity(0.1))
+                        .cornerRadius(22)
                 }
                 
                 Spacer()
@@ -56,8 +67,16 @@ struct HomeView: View {
             .padding()
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
-            .sheet(isPresented: $showGameMode) {
-                GameModeView()
+            .fullScreenCover(isPresented: Binding(
+                get: { selectedMode != nil },
+                set: { if !$0 { selectedMode = nil } }
+            )) {
+                if let mode = selectedMode {
+                    GameView(mode: mode)
+                        .onDisappear {
+                            selectedMode = nil
+                        }
+                }
             }
         }
     }

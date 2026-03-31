@@ -2,9 +2,9 @@ import SwiftUI
 
 struct GameModeView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var selectedMode: GameMode?
+    @State private var selectedMode: LocalGameMode?
     
-    enum GameMode: String, CaseIterable {
+    enum LocalGameMode: String, CaseIterable {
         case aiEasy = "ai_easy"
         case aiMedium = "ai_medium"
         case aiHard = "ai_hard"
@@ -34,6 +34,15 @@ struct GameModeView: View {
             case .twoPlayer: return "和朋友对战"
             }
         }
+        
+        func toGameMode() -> GameMode {
+            switch self {
+            case .aiEasy: return .pveEasy
+            case .aiMedium: return .pveMedium
+            case .aiHard: return .pveHard
+            case .twoPlayer: return .pvp
+            }
+        }
     }
     
     var body: some View {
@@ -44,7 +53,7 @@ struct GameModeView: View {
                     .padding(.top, 20)
                 
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                    ForEach(GameMode.allCases, id: \.self) { mode in
+                    ForEach(LocalGameMode.allCases, id: \.self) { mode in
                         GameModeCard(mode: mode, isSelected: selectedMode == mode)
                             .onTapGesture {
                                 selectedMode = mode
@@ -56,9 +65,7 @@ struct GameModeView: View {
                 Spacer()
                 
                 Button(action: {
-                    if let mode = selectedMode {
-                        dismiss()
-                    }
+                    dismiss()
                 }) {
                     Text("开始")
                         .font(AppFont.headline())
@@ -78,32 +85,35 @@ struct GameModeView: View {
                     Button("取消") {
                         dismiss()
                     }
+                    .foregroundColor(Color.theme.primary)
                 }
+            }
+            .fullScreenCover(isPresented: .constant(false)) {
             }
         }
     }
 }
 
 struct GameModeCard: View {
-    let mode: GameModeView.GameMode
+    let mode: GameModeView.LocalGameMode
     let isSelected: Bool
     
     var body: some View {
         VStack(spacing: 8) {
             Image(systemName: mode.icon)
                 .font(.system(size: 32))
-                .foregroundColor(isSelected ? Color.theme.primary : Color.theme.textSecondary)
+                .foregroundColor(isSelected ? Color.theme.primary : Color.theme.text)
             
             Text(mode.name)
-                .font(AppFont.body())
-                .foregroundColor(Color.theme.textPrimary)
+                .font(AppFont.headline())
+                .foregroundColor(isSelected ? Color.theme.primary : Color.theme.text)
             
             Text(mode.description)
-                .font(AppFont.caption())
+                .font(.system(size: 12))
                 .foregroundColor(Color.theme.textSecondary)
         }
-        .frame(maxWidth: .infinity)
         .frame(height: 120)
+        .frame(maxWidth: .infinity)
         .background(isSelected ? Color.theme.primary.opacity(0.1) : Color.theme.surface)
         .cornerRadius(12)
         .overlay(

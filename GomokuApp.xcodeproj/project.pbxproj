@@ -14,16 +14,23 @@
 		4DDD9BCC43DF7BFA6BFD58F5 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10EA54D307D59FC79406DC /* CheckInView.swift */; };
 		50F26F2717C6B5FD805F9B28 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF1940E4825F09ECA7279B /* Theme.swift */; };
 		53BFA20DBB211678D1632675 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC04D6263E5B724554CD71E8 /* ContentView.swift */; };
+		5D795A892F0D612C149D57D3 /* GamePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31540E6EC2237AC4E051FE /* GamePiece.swift */; };
 		8289E12BB0EDD66D060E563D /* GameModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D1E85C437102F80C27B71 /* GameModeView.swift */; };
+		92CF369023796065D77541DD /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E3E9709227CEEFD328089 /* GameView.swift */; };
 		96FAB783A877E7EE3AE2D737 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65D2333CACE0452BDC6A3CE /* HomeView.swift */; };
 		B1F6983C746B0C1F10949441 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF61B2C9D1B78001448197 /* ProfileView.swift */; };
 		B44E42A1E9DDB404566EBD00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1654E5BE6D34E9F15C0763E /* Assets.xcassets */; };
+		CFDA6E30E79B52236AAF6E86 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25116689B67FD25334582F19 /* GameBoard.swift */; };
+		F64C0C5F0A47540EB1DB8112 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937879EF608F7921F1DA52F /* GameEngine.swift */; };
 		FD55518A1D047FCF6E4680C1 /* GomokuAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5EC1204ABE082137E4C55 /* GomokuAppApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0937879EF608F7921F1DA52F /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		0E31540E6EC2237AC4E051FE /* GamePiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePiece.swift; sourceTree = "<group>"; };
 		189D1E85C437102F80C27B71 /* GameModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeView.swift; sourceTree = "<group>"; };
 		22C71DB44A989317313803EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		25116689B67FD25334582F19 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 		3E10EA54D307D59FC79406DC /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
 		44EEBCC87EE8E6A8F54C3B62 /* Skin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
 		4EE0D672BAB8986F45F5462B /* SkinStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinStoreView.swift; sourceTree = "<group>"; };
@@ -31,6 +38,7 @@
 		6DCF61B2C9D1B78001448197 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		92FF1940E4825F09ECA7279B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A3D755E63860DC222B42EEDF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		C16E3E9709227CEEFD328089 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		D1654E5BE6D34E9F15C0763E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D65D2333CACE0452BDC6A3CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EC04D6263E5B724554CD71E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +68,14 @@
 				3E10EA54D307D59FC79406DC /* CheckInView.swift */,
 			);
 			path = CheckIn;
+			sourceTree = "<group>";
+		};
+		39FD121E54884052BDA194DA /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				0937879EF608F7921F1DA52F /* GameEngine.swift */,
+			);
+			path = GameEngine;
 			sourceTree = "<group>";
 		};
 		5714E6D03D05D07DE2B71052 /* GomokuApp */ = {
@@ -96,11 +112,20 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		6CA852B23039391040A7B3F4 /* GameBoard */ = {
+			isa = PBXGroup;
+			children = (
+				C16E3E9709227CEEFD328089 /* GameView.swift */,
+			);
+			path = GameBoard;
+			sourceTree = "<group>";
+		};
 		7B1A0727807C68147291B601 /* Game */ = {
 			isa = PBXGroup;
 			children = (
 				189D1E85C437102F80C27B71 /* GameModeView.swift */,
 				D65D2333CACE0452BDC6A3CE /* HomeView.swift */,
+				6CA852B23039391040A7B3F4 /* GameBoard */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -117,6 +142,7 @@
 		8EA885669E8742FD452BC7DC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				39FD121E54884052BDA194DA /* GameEngine */,
 				FF3AC533E3E45161FDC2087E /* Models */,
 				BEDCE138E4FF972A96B927CF /* Services */,
 				01F0E01D0C70AF884FAB351F /* Utils */,
@@ -190,6 +216,8 @@
 		FF3AC533E3E45161FDC2087E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				25116689B67FD25334582F19 /* GameBoard.swift */,
+				0E31540E6EC2237AC4E051FE /* GamePiece.swift */,
 				44EEBCC87EE8E6A8F54C3B62 /* Skin.swift */,
 			);
 			path = Models;
@@ -269,7 +297,11 @@
 				0329695F65C0B6D6C217E83B /* AppState.swift in Sources */,
 				4DDD9BCC43DF7BFA6BFD58F5 /* CheckInView.swift in Sources */,
 				53BFA20DBB211678D1632675 /* ContentView.swift in Sources */,
+				CFDA6E30E79B52236AAF6E86 /* GameBoard.swift in Sources */,
+				F64C0C5F0A47540EB1DB8112 /* GameEngine.swift in Sources */,
 				8289E12BB0EDD66D060E563D /* GameModeView.swift in Sources */,
+				5D795A892F0D612C149D57D3 /* GamePiece.swift in Sources */,
+				92CF369023796065D77541DD /* GameView.swift in Sources */,
 				FD55518A1D047FCF6E4680C1 /* GomokuAppApp.swift in Sources */,
 				96FAB783A877E7EE3AE2D737 /* HomeView.swift in Sources */,
 				B1F6983C746B0C1F10949441 /* ProfileView.swift in Sources */,
