@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		0329695F65C0B6D6C217E83B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D755E63860DC222B42EEDF /* AppState.swift */; };
 		084EBC336C230F81215A97E4 /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EEBCC87EE8E6A8F54C3B62 /* Skin.swift */; };
+		0FFA1ECE8BEC6E6EC66BA1B3 /* SupabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDAA2DAA6626382A1AFF31E /* SupabaseConfig.swift */; };
 		15FA556C04E4AED9F1FFC8FB /* SkinStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE0D672BAB8986F45F5462B /* SkinStoreView.swift */; };
 		2BE3867256F7433BD3BFC35B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5792033A6921C66B72462318 /* SnapKit */; };
 		4DDD9BCC43DF7BFA6BFD58F5 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10EA54D307D59FC79406DC /* CheckInView.swift */; };
 		50F26F2717C6B5FD805F9B28 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF1940E4825F09ECA7279B /* Theme.swift */; };
-		527120A0EEC270E21159ECFB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB0CE4A940FD3A2EEDA4E6B1 /* FirebaseAnalytics */; };
+		527120A0EEC270E21159ECFB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 49BB2D93042D31D72498D285 /* Supabase */; };
 		53BFA20DBB211678D1632675 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC04D6263E5B724554CD71E8 /* ContentView.swift */; };
-		6F43787B1B6F4E1B4DE4719F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEBB0E58B4080CE5A8508023 /* GoogleService-Info.plist */; };
 		8289E12BB0EDD66D060E563D /* GameModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D1E85C437102F80C27B71 /* GameModeView.swift */; };
 		96FAB783A877E7EE3AE2D737 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65D2333CACE0452BDC6A3CE /* HomeView.swift */; };
 		B1F6983C746B0C1F10949441 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF61B2C9D1B78001448197 /* ProfileView.swift */; };
@@ -33,10 +33,10 @@
 		6DCF61B2C9D1B78001448197 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		92FF1940E4825F09ECA7279B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A3D755E63860DC222B42EEDF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		CEBB0E58B4080CE5A8508023 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1654E5BE6D34E9F15C0763E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D65D2333CACE0452BDC6A3CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EC04D6263E5B724554CD71E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ECDAA2DAA6626382A1AFF31E /* SupabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConfig.swift; sourceTree = "<group>"; };
 		F773F86033E358458A847E4F /* GomokuApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GomokuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527120A0EEC270E21159ECFB /* FirebaseAnalytics in Frameworks */,
+				527120A0EEC270E21159ECFB /* Supabase in Frameworks */,
 				2BE3867256F7433BD3BFC35B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				D1654E5BE6D34E9F15C0763E /* Assets.xcassets */,
-				CEBB0E58B4080CE5A8508023 /* GoogleService-Info.plist */,
 				B7B0EB98F44E8F1EDD97D96C /* Localization */,
 			);
 			path = Resources;
@@ -171,6 +170,7 @@
 		BEDCE138E4FF972A96B927CF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				ECDAA2DAA6626382A1AFF31E /* SupabaseConfig.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 			);
 			name = GomokuApp;
 			packageProductDependencies = (
-				FB0CE4A940FD3A2EEDA4E6B1 /* FirebaseAnalytics */,
+				49BB2D93042D31D72498D285 /* Supabase */,
 				5792033A6921C66B72462318 /* SnapKit */,
 			);
 			productName = GomokuApp;
@@ -259,8 +259,8 @@
 			mainGroup = 9EAF513798FE30D20C963436;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				D78258840BB45CA69F6339F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				F3D33B3AA567D59CF8D2AC57 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2F762FF1475810E798479BC2 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
@@ -277,7 +277,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B44E42A1E9DDB404566EBD00 /* Assets.xcassets in Resources */,
-				6F43787B1B6F4E1B4DE4719F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +296,7 @@
 				B1F6983C746B0C1F10949441 /* ProfileView.swift in Sources */,
 				084EBC336C230F81215A97E4 /* Skin.swift in Sources */,
 				15FA556C04E4AED9F1FFC8FB /* SkinStoreView.swift in Sources */,
+				0FFA1ECE8BEC6E6EC66BA1B3 /* SupabaseConfig.swift in Sources */,
 				50F26F2717C6B5FD805F9B28 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,12 +491,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D78258840BB45CA69F6339F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		2F762FF1475810E798479BC2 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			repositoryURL = "https://github.com/supabase/supabase-swift";
 			requirement = {
 				kind = exactVersion;
-				version = 11.0.0;
+				version = 2.5.0;
 			};
 		};
 		F3D33B3AA567D59CF8D2AC57 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
@@ -510,15 +510,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		49BB2D93042D31D72498D285 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F762FF1475810E798479BC2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
 		5792033A6921C66B72462318 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F3D33B3AA567D59CF8D2AC57 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		FB0CE4A940FD3A2EEDA4E6B1 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D78258840BB45CA69F6339F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

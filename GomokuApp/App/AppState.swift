@@ -1,7 +1,12 @@
 import SwiftUI
-import FirebaseCore
+import Supabase
 
 class AppState: ObservableObject {
+    static let supabase = SupabaseClient(
+        supabaseURL: URL(string: "https://your-project.supabase.co")!,
+        supabaseKey: "your-anon-key"
+    )
+    
     @Published var currentUser: User?
     @Published var selectedSkin: Skin = .classic
     @Published var coins: Int = 0
@@ -9,7 +14,6 @@ class AppState: ObservableObject {
     @Published var isPremium: Bool = false
     
     init() {
-        FirebaseApp.configure()
         loadUserData()
     }
     
