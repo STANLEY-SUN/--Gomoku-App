@@ -72,7 +72,7 @@ struct HomeView: View {
                 set: { if !$0 { selectedMode = nil } }
             )) {
                 if let mode = selectedMode {
-                    GameView(mode: mode)
+                    GameView(mode: mode, skin: appState.selectedSkin)
                         .onDisappear {
                             selectedMode = nil
                         }

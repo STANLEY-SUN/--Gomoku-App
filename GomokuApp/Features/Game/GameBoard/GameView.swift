@@ -5,9 +5,11 @@ struct GameView: View {
     @State private var showModeSelection = false
     @State private var showResult = false
     @Environment(\.dismiss) private var dismiss
+    var skin: Skin = .classic
     
-    init(mode: GameMode = .pveMedium) {
+    init(mode: GameMode = .pveMedium, skin: Skin = .classic) {
         _gameEngine = StateObject(wrappedValue: GameEngine(mode: mode))
+        self.skin = skin
     }
     
     var body: some View {
@@ -191,12 +193,14 @@ struct GameView: View {
     }
     
     private func pieceView(player: Player, size: CGFloat) -> some View {
-        Circle()
+        let blackColor = skin.blackStoneColor
+        let whiteColor = skin.whiteStoneColor
+        return Circle()
             .fill(
                 RadialGradient(
                     colors: player == .black 
-                        ? [Color.pieceBlackHighlight, Color.pieceBlack]
-                        : [Color.pieceWhiteHighlight, Color.pieceWhite],
+                        ? [blackColor.opacity(0.8), blackColor]
+                        : [whiteColor.opacity(0.9), whiteColor.opacity(0.7)],
                     center: .center,
                     startRadius: 0,
                     endRadius: size / 2

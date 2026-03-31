@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 enum Skin: String, CaseIterable, Identifiable {
     case classic = "classic"
@@ -34,6 +35,32 @@ enum Skin: String, CaseIterable, Identifiable {
     
     var price: Double? {
         isDefault ? nil : 0.99
+    }
+    
+    var blackStoneColor: Color {
+        switch self {
+        case .classic: return Color(hex: "1A1A1A")
+        case .mint: return Color(hex: "2E8B57")
+        case .warmOrange: return Color(hex: "FF8C00")
+        case .sakura: return Color(hex: "FF69B4")
+        case .otherWorld: return Color(hex: "6A0DAD")
+        case .futureTech: return Color(hex: "00FFFF")
+        case .dunhuang: return Color(hex: "DAA520")
+        case .bronze: return Color(hex: "CD7F32")
+        }
+    }
+    
+    var whiteStoneColor: Color {
+        switch self {
+        case .classic: return Color(hex: "F5F5F5")
+        case .mint: return Color(hex: "98FB98")
+        case .warmOrange: return Color(hex: "FFE4B5")
+        case .sakura: return Color(hex: "FFC0CB")
+        case .otherWorld: return Color(hex: "E6E6FA")
+        case .futureTech: return Color(hex: "FF00FF")
+        case .dunhuang: return Color(hex: "FFD700")
+        case .bronze: return Color(hex: "B8860B")
+        }
     }
 }
 
