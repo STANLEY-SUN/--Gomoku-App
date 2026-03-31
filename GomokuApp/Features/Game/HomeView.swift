@@ -4,6 +4,10 @@ struct HomeView: View {
     @EnvironmentObject var appState: AppState
     @State private var selectedMode: GameMode? = nil
     
+    private var currentSkin: Skin {
+        appState.selectedSkin
+    }
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 24) {
@@ -72,7 +76,7 @@ struct HomeView: View {
                 set: { if !$0 { selectedMode = nil } }
             )) {
                 if let mode = selectedMode {
-                    GameView(mode: mode, skin: appState.selectedSkin)
+                    GameView(mode: mode, skin: currentSkin)
                         .onDisappear {
                             selectedMode = nil
                         }
