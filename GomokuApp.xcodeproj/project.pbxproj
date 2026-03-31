@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0329695F65C0B6D6C217E83B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D755E63860DC222B42EEDF /* AppState.swift */; };
+		084EBC336C230F81215A97E4 /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EEBCC87EE8E6A8F54C3B62 /* Skin.swift */; };
+		15FA556C04E4AED9F1FFC8FB /* SkinStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE0D672BAB8986F45F5462B /* SkinStoreView.swift */; };
+		2BE3867256F7433BD3BFC35B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5792033A6921C66B72462318 /* SnapKit */; };
+		4DDD9BCC43DF7BFA6BFD58F5 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10EA54D307D59FC79406DC /* CheckInView.swift */; };
+		50F26F2717C6B5FD805F9B28 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF1940E4825F09ECA7279B /* Theme.swift */; };
+		527120A0EEC270E21159ECFB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB0CE4A940FD3A2EEDA4E6B1 /* FirebaseAnalytics */; };
+		53BFA20DBB211678D1632675 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC04D6263E5B724554CD71E8 /* ContentView.swift */; };
+		6F43787B1B6F4E1B4DE4719F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEBB0E58B4080CE5A8508023 /* GoogleService-Info.plist */; };
+		8289E12BB0EDD66D060E563D /* GameModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D1E85C437102F80C27B71 /* GameModeView.swift */; };
+		96FAB783A877E7EE3AE2D737 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65D2333CACE0452BDC6A3CE /* HomeView.swift */; };
+		B1F6983C746B0C1F10949441 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF61B2C9D1B78001448197 /* ProfileView.swift */; };
+		B44E42A1E9DDB404566EBD00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1654E5BE6D34E9F15C0763E /* Assets.xcassets */; };
+		FD55518A1D047FCF6E4680C1 /* GomokuAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5EC1204ABE082137E4C55 /* GomokuAppApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		189D1E85C437102F80C27B71 /* GameModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeView.swift; sourceTree = "<group>"; };
+		22C71DB44A989317313803EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3E10EA54D307D59FC79406DC /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
+		44EEBCC87EE8E6A8F54C3B62 /* Skin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
+		4EE0D672BAB8986F45F5462B /* SkinStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinStoreView.swift; sourceTree = "<group>"; };
+		65C5EC1204ABE082137E4C55 /* GomokuAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuAppApp.swift; sourceTree = "<group>"; };
+		6DCF61B2C9D1B78001448197 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		92FF1940E4825F09ECA7279B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A3D755E63860DC222B42EEDF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CEBB0E58B4080CE5A8508023 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1654E5BE6D34E9F15C0763E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D65D2333CACE0452BDC6A3CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EC04D6263E5B724554CD71E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F773F86033E358458A847E4F /* GomokuApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GomokuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8201F6CDE5503D092DE1A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				527120A0EEC270E21159ECFB /* FirebaseAnalytics in Frameworks */,
+				2BE3867256F7433BD3BFC35B /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01F0E01D0C70AF884FAB351F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				92FF1940E4825F09ECA7279B /* Theme.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0BF0758CF03496B3DC3DC87C /* Social */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		204A3D06698FAF420D38067D /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				3E10EA54D307D59FC79406DC /* CheckInView.swift */,
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
+		5714E6D03D05D07DE2B71052 /* GomokuApp */ = {
+			isa = PBXGroup;
+			children = (
+				22C71DB44A989317313803EE /* Info.plist */,
+				CE745F943F476FCB5E7CA207 /* App */,
+				8EA885669E8742FD452BC7DC /* Core */,
+				5D421DC68C696F73A318A553 /* Features */,
+				838274FC23E458C69CDC39A6 /* Resources */,
+			);
+			path = GomokuApp;
+			sourceTree = "<group>";
+		};
+		5D421DC68C696F73A318A553 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				9388FC4426338AB62490A24F /* Achievement */,
+				204A3D06698FAF420D38067D /* CheckIn */,
+				7B1A0727807C68147291B601 /* Game */,
+				65C7E8403D83012182FF6460 /* Profile */,
+				A8C8F3B25FA23DD7D3EDA6FD /* Rank */,
+				F1E876BD022309472DC93D35 /* Skin */,
+				0BF0758CF03496B3DC3DC87C /* Social */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		65C7E8403D83012182FF6460 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6DCF61B2C9D1B78001448197 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7B1A0727807C68147291B601 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				189D1E85C437102F80C27B71 /* GameModeView.swift */,
+				D65D2333CACE0452BDC6A3CE /* HomeView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		838274FC23E458C69CDC39A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D1654E5BE6D34E9F15C0763E /* Assets.xcassets */,
+				CEBB0E58B4080CE5A8508023 /* GoogleService-Info.plist */,
+				B7B0EB98F44E8F1EDD97D96C /* Localization */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8EA885669E8742FD452BC7DC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FF3AC533E3E45161FDC2087E /* Models */,
+				BEDCE138E4FF972A96B927CF /* Services */,
+				01F0E01D0C70AF884FAB351F /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9388FC4426338AB62490A24F /* Achievement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Achievement;
+			sourceTree = "<group>";
+		};
+		9EAF513798FE30D20C963436 = {
+			isa = PBXGroup;
+			children = (
+				5714E6D03D05D07DE2B71052 /* GomokuApp */,
+				D988673E7609D326820929A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8C8F3B25FA23DD7D3EDA6FD /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		B7B0EB98F44E8F1EDD97D96C /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		BEDCE138E4FF972A96B927CF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE745F943F476FCB5E7CA207 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A3D755E63860DC222B42EEDF /* AppState.swift */,
+				EC04D6263E5B724554CD71E8 /* ContentView.swift */,
+				65C5EC1204ABE082137E4C55 /* GomokuAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D988673E7609D326820929A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F773F86033E358458A847E4F /* GomokuApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1E876BD022309472DC93D35 /* Skin */ = {
+			isa = PBXGroup;
+			children = (
+				4EE0D672BAB8986F45F5462B /* SkinStoreView.swift */,
+			);
+			path = Skin;
+			sourceTree = "<group>";
+		};
+		FF3AC533E3E45161FDC2087E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44EEBCC87EE8E6A8F54C3B62 /* Skin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C17DA41E26EAB7CC78C7219F /* GomokuApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CAFE95B420FD59305175EE3 /* Build configuration list for PBXNativeTarget "GomokuApp" */;
+			buildPhases = (
+				AC271793990068BC0C5AF4A5 /* Sources */,
+				4AB4EA0897C7DC6D5062011B /* Resources */,
+				C8201F6CDE5503D092DE1A4E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GomokuApp;
+			packageProductDependencies = (
+				FB0CE4A940FD3A2EEDA4E6B1 /* FirebaseAnalytics */,
+				5792033A6921C66B72462318 /* SnapKit */,
+			);
+			productName = GomokuApp;
+			productReference = F773F86033E358458A847E4F /* GomokuApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A44E2BB94DE560D1490E1879 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C17DA41E26EAB7CC78C7219F = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 20DD292D5AD57264EFACBCAD /* Build configuration list for PBXProject "GomokuApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 9EAF513798FE30D20C963436;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D78258840BB45CA69F6339F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F3D33B3AA567D59CF8D2AC57 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C17DA41E26EAB7CC78C7219F /* GomokuApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4AB4EA0897C7DC6D5062011B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B44E42A1E9DDB404566EBD00 /* Assets.xcassets in Resources */,
+				6F43787B1B6F4E1B4DE4719F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC271793990068BC0C5AF4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0329695F65C0B6D6C217E83B /* AppState.swift in Sources */,
+				4DDD9BCC43DF7BFA6BFD58F5 /* CheckInView.swift in Sources */,
+				53BFA20DBB211678D1632675 /* ContentView.swift in Sources */,
+				8289E12BB0EDD66D060E563D /* GameModeView.swift in Sources */,
+				FD55518A1D047FCF6E4680C1 /* GomokuAppApp.swift in Sources */,
+				96FAB783A877E7EE3AE2D737 /* HomeView.swift in Sources */,
+				B1F6983C746B0C1F10949441 /* ProfileView.swift in Sources */,
+				084EBC336C230F81215A97E4 /* Skin.swift in Sources */,
+				15FA556C04E4AED9F1FFC8FB /* SkinStoreView.swift in Sources */,
+				50F26F2717C6B5FD805F9B28 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7E6391E8EF1E6387563D7318 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8475E3A6F04DF8D323CBB0A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GomokuApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skillgomoku.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9200D3296C7ABB8E003CAAA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C050F8D03D1A08165C0B6CA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GomokuApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skillgomoku.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CAFE95B420FD59305175EE3 /* Build configuration list for PBXNativeTarget "GomokuApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C050F8D03D1A08165C0B6CA9 /* Debug */,
+				8475E3A6F04DF8D323CBB0A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		20DD292D5AD57264EFACBCAD /* Build configuration list for PBXProject "GomokuApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9200D3296C7ABB8E003CAAA6 /* Debug */,
+				7E6391E8EF1E6387563D7318 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D78258840BB45CA69F6339F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 11.0.0;
+			};
+		};
+		F3D33B3AA567D59CF8D2AC57 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = exactVersion;
+				version = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5792033A6921C66B72462318 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3D33B3AA567D59CF8D2AC57 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FB0CE4A940FD3A2EEDA4E6B1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D78258840BB45CA69F6339F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A44E2BB94DE560D1490E1879 /* Project object */;
+}
