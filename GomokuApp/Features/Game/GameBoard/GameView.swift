@@ -12,6 +12,8 @@ struct GameView: View {
         self.skin = skin
     }
     
+    private var gameBackground: Color { skin.backgroundColor }
+    
     var body: some View {
         NavigationStack {
             VStack(spacing:0) {
@@ -32,7 +34,7 @@ struct GameView: View {
                     .padding(.horizontal, 16)
                     .padding(.bottom, 16)
             }
-            .background(Color.theme.background)
+            .background(gameBackground)
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
@@ -129,19 +131,23 @@ struct GameView: View {
             }
         }
         .aspectRatio(1, contentMode: .fit)
-        .background(Color.theme.surface)
+        .background(gameSkin.boardColor)
         .cornerRadius(8)
         .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
     }
     
+    private var gameSkin: Skin { skin }
+    
     private func boardBackground(size: CGFloat, cellSize: CGFloat) -> some View {
-        ZStack {
-            Color.theme.boardWood
+        let boardColor = gameSkin.boardColor
+        let lineColor = gameSkin.lineColor
+        return ZStack {
+            boardColor
             
             ForEach(0..<GameBoard.boardSize, id: \.self) { row in
                 ForEach(0..<GameBoard.boardSize, id: \.self) { col in
                     Rectangle()
-                        .stroke(Color.boardLine, lineWidth: 0.5)
+                        .stroke(lineColor, lineWidth: 0.5)
                         .frame(width: cellSize, height: cellSize)
                         .position(
                             x: CGFloat(col) * cellSize + cellSize / 2,

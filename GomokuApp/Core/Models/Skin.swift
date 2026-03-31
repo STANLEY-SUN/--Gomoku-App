@@ -62,6 +62,45 @@ enum Skin: String, CaseIterable, Identifiable {
         case .bronze: return Color(hex: "B8860B")
         }
     }
+    
+    var boardColor: Color {
+        switch self {
+        case .classic: return Color(hex: "DEB887")
+        case .mint: return Color(hex: "98FB98")
+        case .warmOrange: return Color(hex: "FFDEAD")
+        case .sakura: return Color(hex: "FFB7C5")
+        case .otherWorld: return Color(hex: "2E2E2E")
+        case .futureTech: return Color(hex: "0A0A0A")
+        case .dunhuang: return Color(hex: "8B4513")
+        case .bronze: return Color(hex: "8B4513")
+        }
+    }
+    
+    var lineColor: Color {
+        switch self {
+        case .classic: return Color(hex: "5C4033")
+        case .mint: return Color(hex: "228B22")
+        case .warmOrange: return Color(hex: "FF8C00")
+        case .sakura: return Color(hex: "DB7093")
+        case .otherWorld: return Color(hex: "9370DB")
+        case .futureTech: return Color(hex: "00CED1")
+        case .dunhuang: return Color(hex: "FFD700")
+        case .bronze: return Color(hex: "B8860B")
+        }
+    }
+    
+    var backgroundColor: Color {
+        switch self {
+        case .classic: return Color(hex: "F5F5F5")
+        case .mint: return Color(hex: "E0FFE0")
+        case .warmOrange: return Color(hex: "FFF8DC")
+        case .sakura: return Color(hex: "FFF0F5")
+        case .otherWorld: return Color(hex: "1A1A2E")
+        case .futureTech: return Color(hex: "000000")
+        case .dunhuang: return Color(hex: "2F1810")
+        case .bronze: return Color(hex: "2F1810")
+        }
+    }
 }
 
 struct SkinData: Identifiable {
