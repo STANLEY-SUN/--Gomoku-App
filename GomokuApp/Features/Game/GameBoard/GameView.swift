@@ -4,6 +4,7 @@ struct GameView: View {
     @StateObject private var gameEngine: GameEngine
     @State private var showModeSelection = false
     @State private var showResult = false
+    @Environment(\.dismiss) private var dismiss
     
     init(mode: GameMode = .pveMedium) {
         _gameEngine = StateObject(wrappedValue: GameEngine(mode: mode))
@@ -33,7 +34,9 @@ struct GameView: View {
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
-                leading: Button("退出") { }
+                leading: Button("退出") {
+                    dismiss()
+                }
                     .foregroundColor(Color.theme.primary),
                 trailing: Button(action: { gameEngine.reset() }) {
                     Image(systemName: "arrow.counterclockwise")
