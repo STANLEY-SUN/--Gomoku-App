@@ -111,8 +111,3 @@ struct DayRewardView: View {
         }
     }
 }
-
-#Preview {
-    CheckInView()
-        .environmentObject(AppState())
-}

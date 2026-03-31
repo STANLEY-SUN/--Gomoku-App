@@ -1,12 +1,6 @@
 import SwiftUI
-import Supabase
 
 class AppState: ObservableObject {
-    static let supabase = SupabaseClient(
-        supabaseURL: URL(string: "https://your-project.supabase.co")!,
-        supabaseKey: "your-anon-key"
-    )
-    
     @Published var currentUser: User?
     @Published var selectedSkin: Skin = .classic
     @Published var coins: Int = 0
@@ -32,6 +26,14 @@ class AppState: ObservableObject {
         UserDefaults.standard.set(isPremium, forKey: Keys.isPremium)
         UserDefaults.standard.set(selectedSkin.rawValue, forKey: Keys.selectedSkin)
     }
+}
+
+struct User: Identifiable {
+    let id: String
+    var username: String
+    var wins: Int
+    var losses: Int
+    var winStreak: Int
 }
 
 struct Keys {

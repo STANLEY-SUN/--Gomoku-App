@@ -11,10 +11,8 @@
 		084EBC336C230F81215A97E4 /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EEBCC87EE8E6A8F54C3B62 /* Skin.swift */; };
 		0FFA1ECE8BEC6E6EC66BA1B3 /* SupabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDAA2DAA6626382A1AFF31E /* SupabaseConfig.swift */; };
 		15FA556C04E4AED9F1FFC8FB /* SkinStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE0D672BAB8986F45F5462B /* SkinStoreView.swift */; };
-		2BE3867256F7433BD3BFC35B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5792033A6921C66B72462318 /* SnapKit */; };
 		4DDD9BCC43DF7BFA6BFD58F5 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10EA54D307D59FC79406DC /* CheckInView.swift */; };
 		50F26F2717C6B5FD805F9B28 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF1940E4825F09ECA7279B /* Theme.swift */; };
-		527120A0EEC270E21159ECFB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 49BB2D93042D31D72498D285 /* Supabase */; };
 		53BFA20DBB211678D1632675 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC04D6263E5B724554CD71E8 /* ContentView.swift */; };
 		8289E12BB0EDD66D060E563D /* GameModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D1E85C437102F80C27B71 /* GameModeView.swift */; };
 		96FAB783A877E7EE3AE2D737 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65D2333CACE0452BDC6A3CE /* HomeView.swift */; };
@@ -39,18 +37,6 @@
 		ECDAA2DAA6626382A1AFF31E /* SupabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConfig.swift; sourceTree = "<group>"; };
 		F773F86033E358458A847E4F /* GomokuApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GomokuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C8201F6CDE5503D092DE1A4E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				527120A0EEC270E21159ECFB /* Supabase in Frameworks */,
-				2BE3867256F7433BD3BFC35B /* SnapKit in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		01F0E01D0C70AF884FAB351F /* Utils */ = {
@@ -218,7 +204,6 @@
 			buildPhases = (
 				AC271793990068BC0C5AF4A5 /* Sources */,
 				4AB4EA0897C7DC6D5062011B /* Resources */,
-				C8201F6CDE5503D092DE1A4E /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,8 +211,6 @@
 			);
 			name = GomokuApp;
 			packageProductDependencies = (
-				49BB2D93042D31D72498D285 /* Supabase */,
-				5792033A6921C66B72462318 /* SnapKit */,
 			);
 			productName = GomokuApp;
 			productReference = F773F86033E358458A847E4F /* GomokuApp.app */;
@@ -258,10 +241,6 @@
 			);
 			mainGroup = 9EAF513798FE30D20C963436;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				F3D33B3AA567D59CF8D2AC57 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				2F762FF1475810E798479BC2 /* XCRemoteSwiftPackageReference "supabase-swift" */,
-			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
@@ -489,38 +468,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2F762FF1475810E798479BC2 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/supabase/supabase-swift";
-			requirement = {
-				kind = exactVersion;
-				version = 2.5.0;
-			};
-		};
-		F3D33B3AA567D59CF8D2AC57 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = exactVersion;
-				version = 5.7.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		49BB2D93042D31D72498D285 /* Supabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2F762FF1475810E798479BC2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Supabase;
-		};
-		5792033A6921C66B72462318 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F3D33B3AA567D59CF8D2AC57 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A44E2BB94DE560D1490E1879 /* Project object */;
 }

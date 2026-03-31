@@ -33,8 +33,3 @@ struct ContentView: View {
         .tint(Color.theme.primary)
     }
 }
-
-#Preview {
-    ContentView()
-        .environmentObject(AppState())
-}

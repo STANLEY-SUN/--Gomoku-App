@@ -67,8 +67,3 @@ struct SkinCard: View {
         )
     }
 }
-
-#Preview {
-    SkinStoreView()
-        .environmentObject(AppState())
-}

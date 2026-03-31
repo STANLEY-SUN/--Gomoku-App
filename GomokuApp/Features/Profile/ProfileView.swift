@@ -111,8 +111,3 @@ struct ProfileItemRow: View {
         .padding()
     }
 }
-
-#Preview {
-    ProfileView()
-        .environmentObject(AppState())
-}

@@ -112,7 +112,3 @@ struct GameModeCard: View {
         )
     }
 }
-
-#Preview {
-    GameModeView()
-}
