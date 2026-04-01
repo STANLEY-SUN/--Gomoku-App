@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0329695F65C0B6D6C217E83B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D755E63860DC222B42EEDF /* AppState.swift */; };
 		084EBC336C230F81215A97E4 /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EEBCC87EE8E6A8F54C3B62 /* Skin.swift */; };
+		SOUNDMGR0987654321FEDCBA /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SOUNDMGR1234567890ABCDEF /* SoundManager.swift */; };
 		0FFA1ECE8BEC6E6EC66BA1B3 /* SupabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDAA2DAA6626382A1AFF31E /* SupabaseConfig.swift */; };
 		15FA556C04E4AED9F1FFC8FB /* SkinStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE0D672BAB8986F45F5462B /* SkinStoreView.swift */; };
 		4DDD9BCC43DF7BFA6BFD58F5 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E10EA54D307D59FC79406DC /* CheckInView.swift */; };
@@ -34,6 +35,7 @@
 		25116689B67FD25334582F19 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 		3E10EA54D307D59FC79406DC /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
 		44EEBCC87EE8E6A8F54C3B62 /* Skin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
+		SOUNDMGR1234567890ABCDEF /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		4EE0D672BAB8986F45F5462B /* SkinStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinStoreView.swift; sourceTree = "<group>"; };
 		65C5EC1204ABE082137E4C55 /* GomokuAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuAppApp.swift; sourceTree = "<group>"; };
 		6DCF61B2C9D1B78001448197 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		BEDCE138E4FF972A96B927CF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				SOUNDMGR1234567890ABCDEF /* SoundManager.swift */,
 				ECDAA2DAA6626382A1AFF31E /* SupabaseConfig.swift */,
 			);
 			path = Services;
@@ -310,6 +313,7 @@
 				96FAB783A877E7EE3AE2D737 /* HomeView.swift in Sources */,
 				B1F6983C746B0C1F10949441 /* ProfileView.swift in Sources */,
 				084EBC336C230F81215A97E4 /* Skin.swift in Sources */,
+				SOUNDMGR0987654321FEDCBA /* SoundManager.swift in Sources */,
 				15FA556C04E4AED9F1FFC8FB /* SkinStoreView.swift in Sources */,
 				0FFA1ECE8BEC6E6EC66BA1B3 /* SupabaseConfig.swift in Sources */,
 				50F26F2717C6B5FD805F9B28 /* Theme.swift in Sources */,

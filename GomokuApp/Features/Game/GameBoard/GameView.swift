@@ -5,6 +5,7 @@ struct GameView: View {
     @State private var showModeSelection = false
     @State private var showResult = false
     @Environment(\.dismiss) private var dismiss
+    @StateObject private var soundManager = SoundManager.shared
     var skin: Skin = .classic
     
     init(mode: GameMode = .pveMedium, skin: Skin = .classic) {
@@ -53,6 +54,18 @@ struct GameView: View {
                 showResult = false
             } else {
                 showResult = true
+                switch newValue {
+                case .win(let player):
+                    if player == .black {
+                        soundManager.playWin()
+                    } else {
+                        soundManager.playLose()
+                    }
+                case .draw:
+                    soundManager.playLose()
+                case .ongoing:
+                    break
+                }
             }
         }
         .alert("游戏结束", isPresented: $showResult) {
@@ -268,7 +281,10 @@ struct GameView: View {
         let position = Position(row: row, col: col)
         
         if gameEngine.board.isValidPosition(position) && gameEngine.board.isEmpty(at: position) {
-            _ = gameEngine.placePiece(at: position)
+            let placed = gameEngine.placePiece(at: position)
+            if placed {
+                soundManager.playPlacePiece()
+            }
         }
     }
     
