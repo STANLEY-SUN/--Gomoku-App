@@ -6,6 +6,7 @@ class AppState: ObservableObject {
     @Published var coins: Int = 0
     @Published var checkInDays: Int = 0
     @Published var isPremium: Bool = false
+    @Published var totalWins: Int = 0
     
     init() {
         loadUserData()
@@ -15,6 +16,7 @@ class AppState: ObservableObject {
         coins = UserDefaults.standard.integer(forKey: Keys.coins)
         checkInDays = UserDefaults.standard.integer(forKey: Keys.checkInDays)
         isPremium = UserDefaults.standard.bool(forKey: Keys.isPremium)
+        totalWins = UserDefaults.standard.integer(forKey: Keys.totalWins)
         if let skinId = UserDefaults.standard.string(forKey: Keys.selectedSkin) {
             selectedSkin = Skin(rawValue: skinId) ?? .classic
         }
@@ -25,6 +27,7 @@ class AppState: ObservableObject {
         UserDefaults.standard.set(checkInDays, forKey: Keys.checkInDays)
         UserDefaults.standard.set(isPremium, forKey: Keys.isPremium)
         UserDefaults.standard.set(selectedSkin.rawValue, forKey: Keys.selectedSkin)
+        UserDefaults.standard.set(totalWins, forKey: Keys.totalWins)
     }
 }
 
@@ -43,4 +46,5 @@ struct Keys {
     static let selectedSkin = "selected_skin"
     static let lastCheckInDate = "last_check_in_date"
     static let unlockedSkins = "unlocked_skins"
+    static let totalWins = "total_wins"
 }

@@ -10,15 +10,18 @@ struct SkinStoreView: View {
                     ForEach(Skin.allCases) { skin in
                         SkinCard(skin: skin, isSelected: appState.selectedSkin == skin)
                             .onTapGesture {
-                                appState.selectedSkin = skin
-                                appState.saveUserData()
+                                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                                    appState.selectedSkin = skin
+                                    appState.saveUserData()
+                                }
                             }
                     }
                 }
                 .padding()
             }
-            .navigationTitle("皮肤商店")
             .background(Color.theme.background)
+            .navigationTitle("皮肤商店")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
@@ -26,44 +29,89 @@ struct SkinStoreView: View {
 struct SkinCard: View {
     let skin: Skin
     let isSelected: Bool
+    @State private var isPressed = false
     
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 0) {
             ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.theme.boardBackground)
-                    .frame(height: 80)
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(
+                        LinearGradient(
+                            colors: [skin.boardColor.opacity(0.8), skin.boardColor.opacity(0.5)],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .frame(height: 100)
                 
-                VStack(spacing: 4) {
+                VStack(spacing: 8) {
+                    ZStack {
+                        Circle()
+                            .fill(skin.blackStoneColor)
+                            .frame(width: 28, height: 28)
+                            .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 2)
+                        
+                        Circle()
+                            .strokeBorder(Color.white.opacity(0.3), lineWidth: 2)
+                            .frame(width: 28, height: 28)
+                    }
+                    
                     Circle()
-                        .fill(Color.theme.blackStone)
-                        .frame(width: 20, height: 20)
-                    Circle()
-                        .fill(Color.theme.whiteStone)
-                        .frame(width: 20, height: 20)
+                        .fill(skin.whiteStoneColor)
+                        .frame(width: 28, height: 28)
+                        .shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 2)
+                }
+                
+                if isSelected {
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 24))
+                                .foregroundColor(.white)
+                                .background(
+                                    Circle()
+                                        .fill(Color.theme.primary)
+                                        .frame(width: 28, height: 28)
+                                )
+                                .padding(8)
+                        }
+                        Spacer()
+                    }
                 }
             }
             
-            Text(skin.name)
-                .font(AppFont.caption())
-                .foregroundColor(Color.theme.textPrimary)
-            
-            if skin.isDefault {
-                Text("免费")
-                    .font(AppFont.small())
-                    .foregroundColor(Color.theme.secondary)
-            } else {
-                Text("¥\(skin.price ?? 0)")
-                    .font(AppFont.small())
+            VStack(spacing: 4) {
+                Text(skin.name)
+                    .font(AppFont.body())
+                    .foregroundColor(Color.theme.text)
+                
+                if skin.isDefault {
+                    Text("免费")
+                        .font(AppFont.small())
+                        .foregroundColor(Color.theme.secondary)
+                } else {
+                    HStack(spacing: 4) {
+                        Image(systemName: "bitcoinsign.circle.fill")
+                            .font(.system(size: 12))
+                        Text("\(Int((skin.price ?? 0) * 100))")
+                            .font(AppFont.small())
+                    }
                     .foregroundColor(Color.theme.accent)
+                }
             }
+            .padding(.vertical, 12)
+            .frame(maxWidth: .infinity)
+            .background(Color.theme.surface.opacity(0.8))
         }
-        .padding(12)
         .background(Color.theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(16)
         .overlay(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: 16)
                 .stroke(isSelected ? Color.theme.primary : Color.clear, lineWidth: 2)
+                .shadow(color: isSelected ? Color.theme.primary.opacity(0.3) : Color.clear, radius: 8)
         )
+        .scaleEffect(isPressed ? 0.95 : 1.0)
+        .animation(.spring(response: 0.3, dampingFraction: 0.6), value: isPressed)
     }
 }
