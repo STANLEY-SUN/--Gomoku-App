@@ -45,31 +45,41 @@ struct SunRaysView: View {
 struct SakuraElementsView: View {
     let size: CGFloat
     
-    private let positions: [CGPoint] = {
-        (0..<8).map { _ in
-            CGPoint(
-                x: CGFloat.random(in: 0.1...0.9),
-                y: CGFloat.random(in: 0.1...0.9)
-            )
-        }
-    }()
+    private let positions: [CGPoint] = [
+        CGPoint(x: 0.15, y: 0.15),
+        CGPoint(x: 0.85, y: 0.15),
+        CGPoint(x: 0.2, y: 0.5),
+        CGPoint(x: 0.8, y: 0.5),
+        CGPoint(x: 0.15, y: 0.85),
+        CGPoint(x: 0.85, y: 0.85),
+        CGPoint(x: 0.5, y: 0.2),
+        CGPoint(x: 0.5, y: 0.8)
+    ]
     
-    private let rotations: [Double] = (0..<8).map { _ in Double.random(in: 0...360) }
+    private let rotations: [Double] = [15, 45, 60, 120, 180, 225, 270, 315]
     
     var body: some View {
         ZStack {
             ForEach(0..<8, id: \.self) { i in
-                Image(systemName: "petal.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.pink.opacity(0.4))
-                    .frame(width: size * 0.06, height: size * 0.06)
+                sakuraPetal
+                    .frame(width: size * 0.07, height: size * 0.07)
                     .rotationEffect(.degrees(rotations[i]))
                     .position(
                         x: positions[i].x * size,
                         y: positions[i].y * size
                     )
             }
+        }
+    }
+    
+    private var sakuraPetal: some View {
+        ZStack {
+            Circle()
+                .fill(Color.pink.opacity(0.7))
+            Circle()
+                .fill(Color.white.opacity(0.5))
+                .frame(width: size * 0.03, height: size * 0.03)
+                .offset(x: -size * 0.01, y: -size * 0.01)
         }
     }
 }
