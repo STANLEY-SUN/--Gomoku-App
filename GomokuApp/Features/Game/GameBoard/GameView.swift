@@ -122,6 +122,8 @@ struct GameView: View {
                 boardBackground(size: size, cellSize: cellSize)
                 
                 piecesView(cellSize: cellSize)
+                
+                skinElementsOverlay(size: size)
             }
             .frame(width: size, height: size)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -137,6 +139,27 @@ struct GameView: View {
     }
     
     private var gameSkin: Skin { skin }
+    
+    private func skinElementsOverlay(size: CGFloat) -> some View {
+        switch gameSkin {
+        case .classic:
+            return AnyView(EmptyView())
+        case .mint:
+            return AnyView(MintLeafView(size: size))
+        case .warmOrange:
+            return AnyView(SunRaysView(size: size))
+        case .sakura:
+            return AnyView(SakuraElementsView(size: size))
+        case .otherWorld:
+            return AnyView(MagicCircleView(size: size))
+        case .futureTech:
+            return AnyView(CircuitBoardView(size: size))
+        case .dunhuang:
+            return AnyView(CloudPatternView(size: size))
+        case .bronze:
+            return AnyView(BronzePatternView(size: size))
+        }
+    }
     
     private func boardBackground(size: CGFloat, cellSize: CGFloat) -> some View {
         let boardColor = gameSkin.boardColor
