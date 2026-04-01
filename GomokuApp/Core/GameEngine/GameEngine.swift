@@ -131,6 +131,8 @@ class GameEngine: ObservableObject {
             
             let move = self.calculateAIMove()
             
+            Thread.sleep(forTimeInterval: 0.5)
+            
             DispatchQueue.main.async {
                 self.isAIThinking = false
                 _ = self.board.placePiece(.white, at: move)
