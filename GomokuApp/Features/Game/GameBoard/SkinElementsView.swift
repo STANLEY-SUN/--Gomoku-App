@@ -45,6 +45,17 @@ struct SunRaysView: View {
 struct SakuraElementsView: View {
     let size: CGFloat
     
+    private let positions: [CGPoint] = {
+        (0..<8).map { _ in
+            CGPoint(
+                x: CGFloat.random(in: 0.1...0.9),
+                y: CGFloat.random(in: 0.1...0.9)
+            )
+        }
+    }()
+    
+    private let rotations: [Double] = (0..<8).map { _ in Double.random(in: 0...360) }
+    
     var body: some View {
         ZStack {
             ForEach(0..<8, id: \.self) { i in
@@ -53,10 +64,10 @@ struct SakuraElementsView: View {
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(.pink.opacity(0.4))
                     .frame(width: size * 0.06, height: size * 0.06)
-                    .rotationEffect(.degrees(Double.random(in: 0...360)))
+                    .rotationEffect(.degrees(rotations[i]))
                     .position(
-                        x: size * CGFloat.random(in: 0.1...0.9),
-                        y: size * CGFloat.random(in: 0.1...0.9)
+                        x: positions[i].x * size,
+                        y: positions[i].y * size
                     )
             }
         }
