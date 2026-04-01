@@ -4,6 +4,7 @@ struct GameView: View {
     @StateObject private var gameEngine: GameEngine
     @State private var showModeSelection = false
     @State private var showResult = false
+    @State private var showVictoryEffect = false
     @Environment(\.dismiss) private var dismiss
     @StateObject private var soundManager = SoundManager.shared
     var skin: Skin = .classic
@@ -35,7 +36,15 @@ struct GameView: View {
                     .padding(.horizontal, 16)
                     .padding(.bottom, 16)
             }
-            .background(gameBackground)
+            .background(
+            ZStack {
+                gameBackground
+                if skin != .classic {
+                    ContinuousLightEffect(skin: skin)
+                        .ignoresSafeArea()
+                }
+            }
+        )
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
@@ -52,12 +61,14 @@ struct GameView: View {
         .onChange(of: gameEngine.gameResult) { newValue in
             if case .ongoing = newValue {
                 showResult = false
+                showVictoryEffect = false
             } else {
                 showResult = true
                 switch newValue {
                 case .win(let player):
                     if player == .black {
                         soundManager.playWin()
+                        showVictoryEffect = true
                     } else {
                         soundManager.playLose()
                     }
@@ -82,6 +93,13 @@ struct GameView: View {
                 Text("平局！")
             case .ongoing:
                 Text("")
+            }
+        }
+        .fullScreenCover(isPresented: $showVictoryEffect) {
+            if case .win(let player) = gameEngine.gameResult {
+                VictoryEffectView(winner: player) {
+                    showVictoryEffect = false
+                }
             }
         }
     }
@@ -212,7 +230,8 @@ struct GameView: View {
                 ForEach(0..<GameBoard.boardSize, id: \.self) { col in
                     let pos = Position(row: row, col: col)
                     if let player = gameEngine.board.getPlayer(at: pos) {
-                        pieceView(player: player, size: cellSize * 0.85)
+                        AnimatedPieceView(player: player, size: cellSize * 0.85, skin: skin)
+                            .id("\(row)-\(col)-\(gameEngine.board.moveHistory.count)")
                             .position(
                                 x: CGFloat(col) * cellSize + cellSize / 2,
                                 y: CGFloat(row) * cellSize + cellSize / 2

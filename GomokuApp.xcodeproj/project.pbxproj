@@ -19,6 +19,9 @@
 		8289E12BB0EDD66D060E563D /* GameModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D1E85C437102F80C27B71 /* GameModeView.swift */; };
 		92CF369023796065D77541DD /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E3E9709227CEEFD328089 /* GameView.swift */; };
 		SKINELEM0987654321FEDCBA /* SkinElementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SKINELEM1234567890ABCDEF /* SkinElementsView.swift */; };
+		ANIMPIEC0987654321FEDCBA /* AnimatedPieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ANIMPIEC1234567890ABCDE /* AnimatedPieceView.swift */; };
+		VICTORY0987654321FEDCBA /* VictoryEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = VICTORY1234567890ABCDEFG /* VictoryEffectView.swift */; };
+		CONTINUL0987654321FEDCBA /* ContinuousLightEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CONTINUL1234567890ABCDE /* ContinuousLightEffect.swift */; };
 		96FAB783A877E7EE3AE2D737 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65D2333CACE0452BDC6A3CE /* HomeView.swift */; };
 		B1F6983C746B0C1F10949441 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF61B2C9D1B78001448197 /* ProfileView.swift */; };
 		B44E42A1E9DDB404566EBD00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1654E5BE6D34E9F15C0763E /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		A3D755E63860DC222B42EEDF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		C16E3E9709227CEEFD328089 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		SKINELEM1234567890ABCDEF /* SkinElementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinElementsView.swift; sourceTree = "<group>"; };
+		ANIMPIEC1234567890ABCDE /* AnimatedPieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPieceView.swift; sourceTree = "<group>"; };
+		VICTORY1234567890ABCDEFG /* VictoryEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryEffectView.swift; sourceTree = "<group>"; };
+		CONTINUL1234567890ABCDE /* ContinuousLightEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuousLightEffect.swift; sourceTree = "<group>"; };
 		D1654E5BE6D34E9F15C0763E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D65D2333CACE0452BDC6A3CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EC04D6263E5B724554CD71E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +127,9 @@
 			children = (
 				C16E3E9709227CEEFD328089 /* GameView.swift */,
 				SKINELEM1234567890ABCDEF /* SkinElementsView.swift */,
+				ANIMPIEC1234567890ABCDE /* AnimatedPieceView.swift */,
+				VICTORY1234567890ABCDEFG /* VictoryEffectView.swift */,
+				CONTINUL1234567890ABCDE /* ContinuousLightEffect.swift */,
 			);
 			path = GameBoard;
 			sourceTree = "<group>";
@@ -309,6 +318,9 @@
 				5D795A892F0D612C149D57D3 /* GamePiece.swift in Sources */,
 				92CF369023796065D77541DD /* GameView.swift in Sources */,
 				SKINELEM0987654321FEDCBA /* SkinElementsView.swift in Sources */,
+				ANIMPIEC0987654321FEDCBA /* AnimatedPieceView.swift in Sources */,
+				VICTORY0987654321FEDCBA /* VictoryEffectView.swift in Sources */,
+				CONTINUL0987654321FEDCBA /* ContinuousLightEffect.swift in Sources */,
 				FD55518A1D047FCF6E4680C1 /* GomokuAppApp.swift in Sources */,
 				96FAB783A877E7EE3AE2D737 /* HomeView.swift in Sources */,
 				B1F6983C746B0C1F10949441 /* ProfileView.swift in Sources */,
