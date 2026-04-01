@@ -74,12 +74,49 @@ struct SakuraElementsView: View {
     
     private var sakuraPetal: some View {
         ZStack {
+            sakuraShape
+                .fill(
+                    RadialGradient(
+                        colors: [.pink.opacity(0.9), .pink.opacity(0.6)],
+                        center: .topLeading,
+                        startRadius: 0,
+                        endRadius: size * 0.04
+                    )
+                )
+            
             Circle()
-                .fill(Color.pink.opacity(0.7))
-            Circle()
-                .fill(Color.white.opacity(0.5))
-                .frame(width: size * 0.03, height: size * 0.03)
-                .offset(x: -size * 0.01, y: -size * 0.01)
+                .fill(Color(red: 1, green: 0.8, blue: 0.85))
+                .frame(width: size * 0.02, height: size * 0.02)
+                .offset(x: -size * 0.015, y: -size * 0.015)
+        }
+    }
+    
+    private var sakuraShape: some Shape {
+        return Path { path in
+            let center = CGPoint(x: 0, y: 0)
+            let radius = size * 0.035
+            
+            path.move(to: CGPoint(x: center.x, y: center.y - radius))
+            
+            for i in 0..<5 {
+                let angle = CGFloat(i) * .pi * 2 / 5 - .pi / 2
+                
+                let tipX = center.x + radius * cos(angle)
+                let tipY = center.y + radius * sin(angle)
+                
+                let cp1X = center.x + radius * 0.6 * cos(angle - .pi / 10)
+                let cp1Y = center.y + radius * 0.6 * sin(angle - .pi / 10)
+                let cp2X = center.x + radius * 0.6 * cos(angle + .pi / 10)
+                let cp2Y = center.y + radius * 0.6 * sin(angle + .pi / 10)
+                
+                path.addCurve(
+                    to: CGPoint(x: tipX, y: tipY),
+                    control1: CGPoint(x: cp1X, y: cp1Y),
+                    control2: CGPoint(x: cp2X, y: cp2Y)
+                )
+            }
+            
+            path.closeSubpath()
         }
     }
 }
