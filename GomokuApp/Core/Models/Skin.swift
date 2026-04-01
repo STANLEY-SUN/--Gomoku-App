@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-enum Skin: String, CaseIterable, Identifiable {
+enum Skin: String, CaseIterable, Identifiable, Codable {
     case classic = "classic"
     case mint = "mint"
     case warmOrange = "warm_orange"

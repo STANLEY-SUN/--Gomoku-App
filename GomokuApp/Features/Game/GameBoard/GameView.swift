@@ -7,6 +7,7 @@ struct GameView: View {
     @State private var showVictoryEffect = false
     @Environment(\.dismiss) private var dismiss
     @StateObject private var soundManager = SoundManager.shared
+    @StateObject private var dataManager = DataManager.shared
     var skin: Skin = .classic
     
     init(mode: GameMode = .pveMedium, skin: Skin = .classic) {
@@ -68,12 +69,15 @@ struct GameView: View {
                 case .win(let player):
                     if player == .black {
                         soundManager.playWin()
+                        dataManager.recordGameResult(winner: .black)
                         showVictoryEffect = true
                     } else {
                         soundManager.playLose()
+                        dataManager.recordGameResult(winner: .white)
                     }
                 case .draw:
                     soundManager.playLose()
+                    dataManager.recordGameResult(winner: nil)
                 case .ongoing:
                     break
                 }
